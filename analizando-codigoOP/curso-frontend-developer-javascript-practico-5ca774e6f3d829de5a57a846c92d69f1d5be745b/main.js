@@ -3,37 +3,37 @@ const menuHamIcon = document.querySelector('.menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
-const aside = document.querySelector('.product-detail');
+const shippingCartContainer = document.querySelector('#shippingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
-menuCarritoIcon.addEventListener('click', toggleCarritoAside);
+menuCarritoIcon.addEventListener('click', toggleCarritoshippingCartContainer);
 
 
 /* function toggleDesktopMenu(){
   desktopMenu.classList.toggle('inactive');
 }
 
-function toggleCarritoAside(){
+function toggleCarritoshoppingCartContainer(){
   const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
 
   if (!isMobileMenuClosed) {
     mobileMenu.classList.add('inactive');
   }
 
-  aside.classList.add('inactive');
+  shippingCartContainer.classList.add('inactive');
 } 
 
 function toggleMobileMenu(){
   mobileMenu.classList.toggle('inactive');
 } */
 
-function toggleDesktopMenu() { aside.classList.add('inactive'); desktopMenu.classList.toggle('inactive'); }
+function toggleDesktopMenu() { shippingCartContainer.classList.add('inactive'); desktopMenu.classList.toggle('inactive'); }
 
-function toggleMobileMenu() { aside.classList.add('inactive'); mobileMenu.classList.toggle('inactive'); }
+function toggleMobileMenu() { shippingCartContainer.classList.add('inactive'); mobileMenu.classList.toggle('inactive'); }
 
-function toggleCarritoAside() { desktopMenu.classList.add('inactive'); mobileMenu.classList.add('inactive'); aside.classList.toggle('inactive'); }
+function toggleCarritoAside() { desktopMenu.classList.add('inactive'); mobileMenu.classList.add('inactive'); shippingCartContainer.classList.toggle('inactive'); }
 
 const productList = [];
 productList.push({
